@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+Twenty by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html data-ng-app="TableDemo" >
+	<head>
+		<title>Sensio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/table.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body class="index">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1 id="logo" data-bind="with: selectedLanguage"><a href="index.html">Sensio <span data-bind="text: credit">  </span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current" data-bind="with: selectedLanguage"><a href="index.html" data-bind="text: welcome">Welcome</a></li>
+						<li class="submenu">
+							<select data-bind="options: languages, optionsText: 'name', value: selectedLanguage"></select>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner" data-bind="with: selectedLanguage">
+
+				<!--
+				".inner" is set up as an inline-block so it automatically expands
+				in both directions to fit whatever's inside it. This means it won't
+				automatically wrap lines, so be sure to use line breaks where
+				appropriate (<br />).
+				-->
+			 
+			</section>
+
+			<!-- Main -->
+			<article id="main" data-bind="with: selectedLanguage">
+
+				 
+
+					<!-- One -->
+			 
+					<!-- Two -->
+					<section class="wrapper style1 container special" data-ng-controller="tableController as vm" id="tableDemo">
+						<div class="row">
+
+                            <div id="no-more-tables">
+                                <table class="col-md-12 table-bordered table-striped table-condensed cf table">
+                                    <thead class="cf">
+                                        <tr>
+                                            <th style="width: 18vw;" class="">Zone</th>
+                                            <th style="width: 18vw;" class="">Timer Climate</th>
+                                            <th style="width: 18vw;" class="">Timer Light</th>
+                                            <th style="width: 18vw;" class="">Kamera</th>
+                                            <th style="width: 18vw;" class="">Heatpump</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="">{{vm.selectedData.zone}}</td>
+                                            <td data-title="">{{vm.selectedData.vame}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.lys}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.kamera}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.heatPump}}</td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="panel panel-primary filterable">
+                                <div class="panel-heading">
+                                    <!-- <h3 class="panel&#45;title">Users</h3> -->
+                                    <div class="pull-right">
+                                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="filters">
+                                            <th><input type="text" class="form-control" placeholder="Zone" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Timer Climate" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Timer Light" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Kamera" disabled></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:left" data-ng-repeat="data in vm.dataList track by $index" data-ng-click="vm.showInfoOnTop($index)">
+                                            <td>{{ data.zone}}</td>
+                                            <td>{{ data.vame}}</td>
+                                            <td>{{ data.lys}}</td>
+                                            <td>{{ data.kamera}}</td>
+                                            <td>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.pushUp($index)">
+                                                    <i class="fa fa-arrow-up"></i>
+                                                </button>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.pullDown($index)">
+                                                    <i class="fa fa-arrow-down"></i>
+                                                </button>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.remove($index)">
+                                                    <i class="fa fa-remove"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+						</div>
+					</section>
+
+				</article>
+
+			    <!-- CTA -->
+		 
+
+			    <!-- Footer -->
+		 
+
+		    </div>
+
+		    <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/knockout-3.3.0.js"></script>
+			<script src="assets/js/translations.js"></script>
+			<script src="assets/js/table.js"></script>
+	    </body>
+    </html>
