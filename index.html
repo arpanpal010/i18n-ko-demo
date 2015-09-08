@@ -1,140 +1,134 @@
 <!DOCTYPE HTML>
 <!--
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Twenty by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html data-ng-app="TableDemo" >
 	<head>
-		<title>Twenty by HTML5 UP</title>
+		<title>Sensio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/table.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="assets/js/angular.min.js"></script>
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo" data-bind="with: selectedLanguage"><a href="index.html">Twenty <span data-bind="text: credit"> by HTML5 UP</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li class="current" data-bind="with: selectedLanguage"><a href="index.html" data-bind="text: welcome">Welcome</a></li>
-							<li class="submenu">
-								<select data-bind="options: languages, optionsText: 'name', value: selectedLanguage"></select>
-							</li>
-						</ul>
-					</nav>
-				</header>
+			<header id="header" class="alt">
+				<h1 id="logo" data-bind="with: selectedLanguage"><a href="index.html">Sensio <span data-bind="text: credit">  </span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current" data-bind="with: selectedLanguage"><a href="index.html" data-bind="text: welcome">Welcome</a></li>
+						<li class="submenu">
+							<select data-bind="options: languages, optionsText: 'name', value: selectedLanguage"></select>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
 			<!-- Banner -->
-				<section id="banner" data-bind="with: selectedLanguage">
+			<section id="banner" data-bind="with: selectedLanguage">
 
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
-					<div class="inner">
-
-						<header>
-							<h2>TWENTY</h2>
-						</header>
-						<p>
-						    <span data-bind="text: descL1">This is a free</span>
-						<br />
-    					    <span data-bind="text: descL2">responsive template</span>
-						<br />
-						<a href="http://html5up.net" data-bind="text: credit">by HTML5 UP</a>.</p>
-						<footer>
-							<ul class="buttons vertical">
-								<li><a href="#main" class="button fit scrolly" data-bind="text: more">Tell Me More</a></li>
-							</ul>
-						</footer>
-
-					</div>
-
-				</section>
+				<!--
+				".inner" is set up as an inline-block so it automatically expands
+				in both directions to fit whatever's inside it. This means it won't
+				automatically wrap lines, so be sure to use line breaks where
+				appropriate (<br />).
+				-->
+			 
+			</section>
 
 			<!-- Main -->
-				<article id="main" data-bind="with: selectedLanguage">
+			<article id="main" data-bind="with: selectedLanguage">
 
-					<header class="special container">
-						<span class="icon fa-bar-chart-o"></span>
-						<h2><span data-bind="text: twentiethL1">As this is my twentieth freebie for HTML5 UP</span>
-						<br />
-					    <span data-bind="text: twentiethL2"> I decided to give it a really creative name.</span</h2>
-					</header>
+				 
 
 					<!-- One -->
-						<section class="wrapper style2 container special-alt">
-							<div class="row 50%">
-								<div class="8u 12u(narrower)">
+			 
+					<!-- Two -->
+					<section class="wrapper style1 container special" data-ng-controller="tableController as vm" id="tableDemo">
+						<div class="row">
 
-									<header>
-										<h2 data-bind="text: behold">Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-									</header>
-									<footer>
-										<ul class="buttons">
-											<li><a href="#" class="button" data-bind="text: find">Find Out More</a></li>
-										</ul>
-									</footer>
+                            <div id="no-more-tables">
+                                <table class="col-md-12 table-bordered table-striped table-condensed cf table">
+                                    <thead class="cf">
+                                        <tr>
+                                            <th style="width: 18vw;" class="">Zone</th>
+                                            <th style="width: 18vw;" class="">Timer Climate</th>
+                                            <th style="width: 18vw;" class="">Timer Light</th>
+                                            <th style="width: 18vw;" class="">Kamera</th>
+                                            <th style="width: 18vw;" class="">Heatpump</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="">{{vm.selectedData.zone}}</td>
+                                            <td data-title="">{{vm.selectedData.vame}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.lys}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.kamera}}</td>
+                                            <td data-title="" class="">{{vm.selectedData.heatPump}}</td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
 
-								</div>
-								<div class="4u 12u(narrower) important(narrower)">
+                            <div class="panel panel-primary filterable">
+                                <div class="panel-heading">
+                                    <!-- <h3 class="panel&#45;title">Users</h3> -->
+                                    <div class="pull-right">
+                                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="filters">
+                                            <th><input type="text" class="form-control" placeholder="Zone" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Timer Climate" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Timer Light" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Kamera" disabled></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:left" data-ng-repeat="data in vm.dataList track by $index" data-ng-click="vm.showInfoOnTop($index)">
+                                            <td>{{ data.zone}}</td>
+                                            <td>{{ data.vame}}</td>
+                                            <td>{{ data.lys}}</td>
+                                            <td>{{ data.kamera}}</td>
+                                            <td>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.pushUp($index)">
+                                                    <i class="fa fa-arrow-up"></i>
+                                                </button>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.pullDown($index)">
+                                                    <i class="fa fa-arrow-down"></i>
+                                                </button>
+                                                <button class="btn btn-small btn-primary" data-ng-click="vm.remove($index)">
+                                                    <i class="fa fa-remove"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+						</div>
+					</section>
 
-									<ul class="featured-icons">
-										<li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-										<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-										<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-										<li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-										<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-										<li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-									</ul>
-
-								</div>
-							</div>
-						</section>
 				</article>
 
-			<!-- CTA -->
-				<section id="cta" data-bind="with: selectedLanguage">
+			    <!-- CTA -->
+		 
 
-					<header>
-						<h2 data-bind="text: ready">Ready to do <strong>something</strong>?</h2>
-					</header>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button special" data-bind="text: lets">Take My Money</a></li>
-						</ul>
-					</footer>
+			    <!-- Footer -->
+		 
 
-				</section>
+		    </div>
 
-			<!-- Footer -->
-				<footer id="footer" data-bind="with: selectedLanguage">
-
-					<ul class="icons">
-						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
+		    <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -145,6 +139,6 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/knockout-3.3.0.js"></script>
 			<script src="assets/js/translations.js"></script>
-
-	</body>
-</html>
+			<script src="assets/js/table.js"></script>
+	    </body>
+    </html>
