@@ -1551,7 +1551,7 @@
 /* Basic */
 
 	body {
-		background: #f3f6fa;
+		background: #f3f4f8;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -2199,6 +2199,7 @@
 		#header h1 {
 			font-weight: 900;
 			margin: 0;
+			color:#000;
 		}
 
 			#header h1 span {
@@ -2394,14 +2395,11 @@
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
-		color: #fff;
+		background-color: #fff;
+ 
+		color: #000;
 		cursor: default;
-		padding: 6em 0;
+		padding: 2em 0;
 		text-align: center;
 	}
 
@@ -2461,7 +2459,7 @@
 /* Main */
 
 	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+ 
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
@@ -3194,3 +3192,60 @@
 			}
 
 	}
+	
+	#tableDemo{border: 1px solid #eaeef1;background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px; padding-bottom: 50px;
+	
+	}
+	#tableDemo td{
+	border-bottom:1px solid #e2e2e2;
+	}
+	
+		#tableDemo .filterable{   width: 98%;
+		
+		}
+	
+	#tableDemo table{  margin: 0 0 0px;
+	
+	}
+	
+	#tableDemo #no-more-tables{
+ border: medium none;
+    margin-left: 30px;
+    padding-left: 10px;
+    width: 88%;
+	
+	}
+	#tableDemo #no-more-tables td{border: medium none;
+	}
+		#tableDemo .btn{
+		background:#51adee;
+		color:#fff;
+		border-bottom:2px solid #2e9fef;
+		border-top:1px solid #fff;
+		border-left:1px solid #fff;
+		border-right:1px solid #fff;
+		
+		}
+	
+	#tableDemo .filterable{
+	padding-top:0px;
+	}
+	
+			#tableDemo .row {
+			padding:40px 0 0 24px;}
+			
+			.filters{
+			background:#f9fafc;
+			color:#000;
+ 
+			
+			}
+			
+				.filters input{
+ 
+				
+				}

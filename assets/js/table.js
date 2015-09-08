@@ -65,46 +65,46 @@ angular.module("TableDemo", []).controller("tableController", function() {
 
 	this.dataList = [
 	    {
-		    zone     : "zone1",
-		    vame     : "Vame1",
-		    lys      : "Lys1",
-		    kamera   : "kamera1",
-		    heatPump : "heatpump1"
+		    zone     : "House(Main Zone)",
+		    vame     : "-",
+		    lys      : "-",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	    {
-		    zone     : "zone2",
-		    vame     : "Vame2",
-		    lys      : "Lys2",
-		    kamera   : "kamera2",
-		    heatPump : "heatpump2"
+		    zone     : "Allrom",
+		    vame     : "House",
+		    lys      : "Yes",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	    {
-		    zone     : "zone3",
-		    vame     : "Vame3",
-		    lys      : "Lys3",
-		    kamera   : "kamera3",
-		    heatPump : "heatpump3"
+		    zone     : "Moterom",
+		    vame     : "House",
+		    lys      : "Yes",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	    {
-		    zone     : "zone4",
-		    vame     : "Vame4",
-		    lys      : "Lys4",
-		    kamera   : "kamera4",
-		    heatPump : "heatpump4"
+		    zone     : "Willam",
+		    vame     : "House",
+		    lys      : "Yes",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	    {
-		    zone     : "zone5",
-		    vame     : "Vame5",
-		    lys      : "Lys5",
-		    kamera   : "kamera5",
-		    heatPump : "heatpump5"
+		    zone     : "Ellen",
+		  vame     : "House",
+		    lys      : "Yes",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	    {
-		    zone     : "zone6",
-		    vame     : "Vame6",
-		    lys      : "Lys6",
-		    kamera   : "kamera6",
-		    heatPump : "heatpump6"
+		    zone     : "Prosjekt",
+		     vame     : "House",
+		    lys      : "Yes",
+		    kamera   : "Yes",
+		    heatPump : "Yes"
 	    },
 	]
 })
